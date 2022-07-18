@@ -17,7 +17,7 @@ function MobileIcone(props) {
 }
 
 function Navbar() {
-    const icons = ["paper-plane", "compass", "heart", "person"];
+    const icones = ["paper-plane", "compass", "heart", "person"];
 
     return (
         <div class="navbar">
@@ -35,7 +35,7 @@ function Navbar() {
                 </div>
 
                 <div class="icones">
-                    {icons.map(icon => <ion-icon name={`${icon}-outline`}></ion-icon>)}
+                    {icones.map(icon => <ion-icon name={`${icon}-outline`}></ion-icon>)}
                 </div>
 
                 <MobileIcone class="icones-mobile" name="paper-plane-outline" />
