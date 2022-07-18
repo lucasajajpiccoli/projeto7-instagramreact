@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Topo(props) {
     return (
         <div class="topo">
@@ -21,14 +23,18 @@ function Conteudo(props) {
 }
 
 function Acoes() {
-    const AcoesLista = ["heart",
-                        "chatbuble",
-                        "paper-plane"];
+    const [likeStatus, setLikeStatus] = React.useState("-outline");
+
+    function trocarLikeStatus() {
+        setLikeStatus(likeStatus === "-outline" ? "" : "-outline");
+    }
 
     return (
         <div class="acoes">
             <div>
-                {AcoesLista.map(icone => <ion-icon name={`${icone}-outline`}></ion-icon>)}
+                <ion-icon name={`heart${likeStatus}`} onClick={trocarLikeStatus}></ion-icon>
+                <ion-icon name="chatbubble-outline"></ion-icon>
+                <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
             <div>
                 <ion-icon name="bookmark-outline"></ion-icon>

@@ -192,7 +192,13 @@ body {
 }
 
 .post .fundo .acoes div:first-child ion-icon {
+  transition: all linear 0.2s;
   margin-right: 6px;
+}
+
+ion-icon[name="heart"] {
+  color: crimson;
+  transition: all linear 0.2s;
 }
 
 .post .fundo .curtidas {
