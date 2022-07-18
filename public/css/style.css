@@ -197,7 +197,7 @@ body {
 }
 
 ion-icon[name="heart"] {
-  color: crimson;
+  color: red;
   transition: all linear 0.2s;
 }
 
